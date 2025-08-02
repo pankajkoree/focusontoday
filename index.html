@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Focus on Today</title>
-    <script src="script.js" defer></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,14 +12,21 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
 
-    <!-- Tailwind CSS Output -->
+    <!-- Tailwind CSS -->
     <link href="./src/output.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
 
     <style>
       body {
         font-family: "Poppins", sans-serif;
+      }
+      .show-error + #error-label {
+        display: block !important;
+      }
+      .completed input {
+        text-decoration: line-through;
+        color: gray;
       }
     </style>
   </head>
@@ -28,111 +34,133 @@
     <main class="px-4 pb-8">
       <!-- Title -->
       <h1
-        class="text-4xl md:text-6xl font-bold text-[#48a300] text-center mb-2 mt-2 md:mt-4 md:mb-4 lg:mt-8 lg:mb-8"
+        class="title text-4xl md:text-6xl font-bold text-[#48a300] text-center mb-2 mt-2 md:mt-4 md:mb-4 lg:mt-8 lg:mb-8"
       >
         Focus on <span class="text-[#61481c]">Today</span>
       </h1>
 
       <!-- App Container -->
       <div
-        class="bg-[#fbfbfb] md:w-[70%] lg:w-[30%] mx-auto rounded-xl p-8 md:p-12 shadow-md"
+        class="app-container bg-[#fbfbfb] md:w-[70%] lg:w-[30%] mx-auto rounded-xl p-8 md:p-12 shadow-md"
       >
         <!-- Subtitle -->
         <h2
-          class="text-2xl md:text-3xl lg:text-3xl flex items-center font-semibold mb-4"
+          class="subtitle text-2xl md:text-3xl lg:text-3xl flex items-center font-semibold mb-4"
         >
           <span>Today</span>
-          <img src="/images/sun_svg.svg" alt="sun" class="ml-4 w-6 h-6" />
+          <img
+            src="/images/sun_svg.svg"
+            alt="sun"
+            class="sun-icon ml-4 w-6 h-6"
+          />
         </h2>
 
-        <p class="text-sm md:text-xl text-gray-500 mb-5">
+        <!-- progress label -->
+        <p class="progress-label text-sm md:text-xl text-gray-500 mb-5">
           Raise the bar by completing your goals!
         </p>
 
         <!-- Progress Bar -->
-        <div class="h-[30px] bg-[#b9cfe8] rounded-full mb-3 overflow-hidden">
+        <div
+          class="progress-bar h-[30px] bg-[#b9cfe8] rounded-full mb-3 overflow-hidden relative"
+        >
           <div
-            class="h-full bg-green-500 rounded-full flex items-center text-xs text-gray-100 font-medium transition-all duration-500"
-            style="width: 66%"
+            class="progress-value h-full bg-green-500 rounded-full flex items-center text-xs text-gray-100 font-medium transition-all duration-500"
+            style="width: 0%"
           >
-            <span class="pl-5 whitespace-nowrap">2/3 completed</span>
+            <span class="pl-5 whitespace-nowrap">0/3 completed</span>
           </div>
         </div>
-        <p class="text-xs text-red-600 mt-2 hidden" id="error-label">
+        <p
+          class="error-label text-xs text-red-600 mt-2 hidden"
+          id="error-label"
+        >
           Please set all the 3 goals!
         </p>
 
         <!-- Goal 1 -->
         <div
-          class="border border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex items-center px-6 mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
+          class="goal-container border w-full border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex justify-center items-center mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
         >
-          <div>
+          <div class="md:w-[10%] lg:w-[10%] flex justify-center">
             <div
-              class="w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+              class="custom-checkbox w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
             >
-              <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+              <img
+                src="./images/tick.svg"
+                class="check-icon hidden"
+                alt="tick mark"
+              />
             </div>
           </div>
-          <div>
+          <div class="md:w-[90%] lg:w-[90%] h-16 lg:h-16 items-center p-2">
             <input
               type="text"
               id="first"
+              class="goal-input w-full h-full flex pl-2"
               placeholder="Add new goal"
-              class="border-none outline-none pl-6 flex-grow font-medium text-base"
             />
           </div>
         </div>
 
         <!-- Goal 2 -->
         <div
-          class="border border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex items-center px-6 mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
+          class="goal-container border w-full border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex justify-center items-center mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
         >
-          <div>
+          <div class="md:w-[10%] lg:w-[10%] flex justify-center">
             <div
-              class="w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+              class="custom-checkbox w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
             >
-              <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+              <img
+                src="./images/tick.svg"
+                class="check-icon hidden"
+                alt="tick mark"
+              />
             </div>
           </div>
-          <div>
+          <div class="md:w-[90%] lg:w-[90%] h-16 lg:h-16 items-center p-2">
             <input
               type="text"
-              id="first"
+              id="second"
+              class="goal-input w-full h-full flex pl-2"
               placeholder="Add new goal"
-              class="border-none outline-none pl-6 flex-grow font-medium text-base"
             />
           </div>
         </div>
 
         <!-- Goal 3 -->
         <div
-          class="border border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex items-center px-6 mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
+          class="goal-container border w-full border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex justify-center items-center mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
         >
-          <div>
+          <div class="md:w-[10%] lg:w-[10%] flex justify-center">
             <div
-              class="w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+              class="custom-checkbox w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
             >
-              <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+              <img
+                src="./images/tick.svg"
+                class="check-icon hidden"
+                alt="tick mark"
+              />
             </div>
           </div>
-          <div>
+          <div class="md:w-[90%] lg:w-[90%] h-16 lg:h-16 items-center p-2">
             <input
               type="text"
-              id="first"
+              id="third"
+              class="goal-input w-full h-full flex pl-2"
               placeholder="Add new goal"
-              class="border-none outline-none pl-6 flex-grow font-medium text-base"
             />
           </div>
         </div>
 
         <!-- Quote -->
-        <p class="font-medium text-center mb-2">
+        <p class="quote font-medium text-center mb-2">
           “Move one step ahead, today!”
         </p>
 
         <!-- Footer -->
         <footer
-          class="font-medium text-xs text-center text-gray-500 md:mt-8 lg:mt-8"
+          class="footer font-medium text-xs text-center text-gray-500 md:mt-8 lg:mt-8"
         >
           Made with ❤️ by pankaj
         </footer>
