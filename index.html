@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Focus on Today - project 1</title>
+    <title>Focus on Today</title>
     <script src="script.js" defer></script>
 
     <!-- Google Fonts -->
@@ -24,26 +24,28 @@
       }
     </style>
   </head>
-  <body class="bg-[#b9cfe8] m-0">
+  <body class="bg-[#b9cfe8] m-0 w-full">
     <main class="px-4 pb-8">
       <!-- Title -->
       <h1
-        class="text-4xl md:text-6xl font-bold text-[#48a300] text-center mb-8"
+        class="text-4xl md:text-6xl font-bold text-[#48a300] text-center mb-2 mt-2 md:mt-4 md:mb-4 lg:mt-8 lg:mb-8"
       >
         Focus on <span class="text-[#61481c]">Today</span>
       </h1>
 
       <!-- App Container -->
       <div
-        class="bg-[#fbfbfb] max-w-[660px] mx-auto rounded-xl p-8 md:p-12 shadow-md"
+        class="bg-[#fbfbfb] md:w-[70%] lg:w-[30%] mx-auto rounded-xl p-8 md:p-12 shadow-md"
       >
         <!-- Subtitle -->
-        <h2 class="text-2xl md:text-3xl flex items-center font-semibold mb-4">
+        <h2
+          class="text-2xl md:text-3xl lg:text-3xl flex items-center font-semibold mb-4"
+        >
           <span>Today</span>
           <img src="/images/sun_svg.svg" alt="sun" class="ml-4 w-6 h-6" />
         </h2>
 
-        <p class="text-sm text-gray-500 mb-5">
+        <p class="text-sm md:text-xl text-gray-500 mb-5">
           Raise the bar by completing your goals!
         </p>
 
@@ -62,62 +64,76 @@
 
         <!-- Goal 1 -->
         <div
-          class="border border-black/10 rounded-xl h-20 flex items-center px-6 mt-10 mb-10"
+          class="border border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex items-center px-6 mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
         >
-          <div
-            class="w-6 h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
-          >
-            <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+          <div>
+            <div
+              class="w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+            >
+              <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+            </div>
           </div>
-          <input
-            type="text"
-            id="first"
-            placeholder="Add new goal"
-            class="border-none outline-none pl-6 flex-grow font-medium text-base"
-          />
+          <div>
+            <input
+              type="text"
+              id="first"
+              placeholder="Add new goal"
+              class="border-none outline-none pl-6 flex-grow font-medium text-base"
+            />
+          </div>
         </div>
 
         <!-- Goal 2 -->
         <div
-          class="border border-black/10 rounded-xl h-20 flex items-center px-6 mb-10"
+          class="border border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex items-center px-6 mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
         >
-          <div
-            class="w-6 h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
-          >
-            <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+          <div>
+            <div
+              class="w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+            >
+              <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+            </div>
           </div>
-          <input
-            type="text"
-            id="second"
-            placeholder="Add new goal"
-            class="border-none outline-none pl-6 flex-grow font-medium text-base"
-          />
+          <div>
+            <input
+              type="text"
+              id="first"
+              placeholder="Add new goal"
+              class="border-none outline-none pl-6 flex-grow font-medium text-base"
+            />
+          </div>
         </div>
 
         <!-- Goal 3 -->
         <div
-          class="border border-black/10 rounded-xl h-20 flex items-center px-6 mb-10"
+          class="border border-black/10 rounded-xl h-16 md:h-20 lg:h-20 flex items-center px-6 mt-4 mb-4 md:mt-10 md:mb-10 lg:mt-10 lg:mb-10"
         >
-          <div
-            class="w-6 h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
-          >
-            <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+          <div>
+            <div
+              class="w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+            >
+              <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+            </div>
           </div>
-          <input
-            type="text"
-            id="third"
-            placeholder="Add new goal"
-            class="border-none outline-none pl-6 flex-grow font-medium text-base"
-          />
+          <div>
+            <input
+              type="text"
+              id="first"
+              placeholder="Add new goal"
+              class="border-none outline-none pl-6 flex-grow font-medium text-base"
+            />
+          </div>
         </div>
 
         <!-- Quote -->
-        <p class="font-medium text-center mb-6">
+        <p class="font-medium text-center mb-2">
           “Move one step ahead, today!”
         </p>
 
         <!-- Footer -->
-        <footer class="font-medium text-xs text-center text-gray-500 mt-16">
+        <footer
+          class="font-medium text-xs text-center text-gray-500 md:mt-8 lg:mt-8"
+        >
           Made with ❤️ by pankaj
         </footer>
       </div>
