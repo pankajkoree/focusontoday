@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus on Today - project 1</title>
+    <script src="script.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+
+    <!-- Tailwind CSS Output -->
+    <link href="./src/output.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#b9cfe8] m-0">
+    <main class="px-4 pb-8">
+      <!-- Title -->
+      <h1
+        class="text-4xl md:text-6xl font-bold text-[#48a300] text-center mb-8"
+      >
+        Focus on <span class="text-[#61481c]">Today</span>
+      </h1>
+
+      <!-- App Container -->
+      <div
+        class="bg-[#fbfbfb] max-w-[660px] mx-auto rounded-xl p-8 md:p-12 shadow-md"
+      >
+        <!-- Subtitle -->
+        <h2 class="text-2xl md:text-3xl flex items-center font-semibold mb-4">
+          <span>Today</span>
+          <img src="/images/sun_svg.svg" alt="sun" class="ml-4 w-6 h-6" />
+        </h2>
+
+        <p class="text-sm text-gray-500 mb-5">
+          Raise the bar by completing your goals!
+        </p>
+
+        <!-- Progress Bar -->
+        <div class="h-[30px] bg-[#b9cfe8] rounded-full mb-3 overflow-hidden">
+          <div
+            class="h-full bg-green-500 rounded-full flex items-center text-xs text-gray-100 font-medium transition-all duration-500"
+            style="width: 66%"
+          >
+            <span class="pl-5 whitespace-nowrap">2/3 completed</span>
+          </div>
+        </div>
+        <p class="text-xs text-red-600 mt-2 hidden" id="error-label">
+          Please set all the 3 goals!
+        </p>
+
+        <!-- Goal 1 -->
+        <div
+          class="border border-black/10 rounded-xl h-20 flex items-center px-6 mt-10 mb-10"
+        >
+          <div
+            class="w-6 h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+          >
+            <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+          </div>
+          <input
+            type="text"
+            id="first"
+            placeholder="Add new goal"
+            class="border-none outline-none pl-6 flex-grow font-medium text-base"
+          />
+        </div>
+
+        <!-- Goal 2 -->
+        <div
+          class="border border-black/10 rounded-xl h-20 flex items-center px-6 mb-10"
+        >
+          <div
+            class="w-6 h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+          >
+            <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+          </div>
+          <input
+            type="text"
+            id="second"
+            placeholder="Add new goal"
+            class="border-none outline-none pl-6 flex-grow font-medium text-base"
+          />
+        </div>
+
+        <!-- Goal 3 -->
+        <div
+          class="border border-black/10 rounded-xl h-20 flex items-center px-6 mb-10"
+        >
+          <div
+            class="w-6 h-6 border border-black/10 rounded-full flex items-center justify-center cursor-pointer"
+          >
+            <img src="./images/tick.svg" class="hidden" alt="tick mark" />
+          </div>
+          <input
+            type="text"
+            id="third"
+            placeholder="Add new goal"
+            class="border-none outline-none pl-6 flex-grow font-medium text-base"
+          />
+        </div>
+
+        <!-- Quote -->
+        <p class="font-medium text-center mb-6">
+          “Move one step ahead, today!”
+        </p>
+
+        <!-- Footer -->
+        <footer class="font-medium text-xs text-center text-gray-500 mt-16">
+          Made with ❤️ by pankaj
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
